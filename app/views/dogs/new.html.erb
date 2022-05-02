@@ -1,0 +1,11 @@
+<%= form_for(@dog) do |f| %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :temper %>
+  <%= f.text_field :temper %>
+  <%= f.label :origin %>
+  <%= f.text_field :origin %>
+  <%= f.label :popularity %>
+  <%= f.text_field :popularity %>
+  <%= f.submit %>
+<% end %>

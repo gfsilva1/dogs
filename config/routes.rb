@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'dogs#popular'
+  resources :dogs do
+    collection do
+      get :popular
+      get :api
+    end
+  end
 end

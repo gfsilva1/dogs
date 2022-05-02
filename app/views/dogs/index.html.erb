@@ -1,0 +1,24 @@
+<div class="contain">
+  <h1>Here's your dog list bro</h1>
+</div>
+
+<div class="contain">
+  <%= form_tag dogs_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a dog breed"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<div class="contain">
+  <% @dogs.each do |dog| %>
+    <%= link_to dog.description, dog_path(dog) %>
+  <% end %>
+</div>
+
+<div class="contain">
+  <%= link_to 'Criar nova raça', new_dog_path, class: "btn btn-ghost" %>
+</div>
