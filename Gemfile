@@ -7,7 +7,7 @@ ruby '2.7.2'
 gem 'rails', '~> 6.1.5'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
-
+gem 'httparty', '~> 0.13.7'
 gem 'pg_search'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
@@ -34,7 +34,6 @@ gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form', github: 'heartcombo/simple_form'
 
-gem 'json', '~> 2.6', '>= 2.6.1'
 gem 'open-uri'
 
 
