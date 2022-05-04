@@ -25,15 +25,6 @@ class DogsController < ApplicationController
     @dogs = Dog.where(popularity: 5)
   end
 
-  def api
-    require "json"
-    require "open-uri"
-
-    link = "https://api.thecatapi.com/v1/images/search?api_key=260eff8d-43b4-422f-9b69-1349794a6ce6"
-    user_serialized = URI.open(link).read
-    @user = JSON.parse(user_serialized)[0]["url"]
-  end
-
   private
 
   def dog_params
