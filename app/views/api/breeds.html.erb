@@ -1,0 +1,25 @@
+
+<h1>
+  Dog breeds
+</h1>
+
+<table>
+  <thread>
+    <td>Nome</td>
+    <td>Descricão</td>
+    <td>Temperamento</td>
+    <td>Origem</td>
+  </thread>
+
+  <tbody>
+    <% @breed.each do |breed|  %>
+      <tr>
+        <td><%= breed["name"]%></td>
+        <td><%= breed["description"] %></td>
+        <td><%= breed["temperament"] %></td>
+        <td><%= breed["origin"] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
