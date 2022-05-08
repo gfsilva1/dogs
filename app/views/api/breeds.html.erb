@@ -6,7 +6,7 @@
 <table>
   <thread>
     <td>Nome</td>
-    <td>Descricão</td>
+    <td>Expectativa de vida</td>
     <td>Temperamento</td>
     <td>Origem</td>
   </thread>
@@ -15,7 +15,7 @@
     <% @breed.each do |breed|  %>
       <tr>
         <td><%= breed["name"]%></td>
-        <td><%= breed["description"] %></td>
+        <td><%= breed["life_span"] %></td>
         <td><%= breed["temperament"] %></td>
         <td><%= breed["origin"] %></td>
       </tr>

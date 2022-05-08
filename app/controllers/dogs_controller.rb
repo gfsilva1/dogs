@@ -1,4 +1,7 @@
 class DogsController < ApplicationController
+  require "json"
+  require "open-uri"
+
   def index
     if params[:query].present?
       @dogs = Dog.batata(params[:query])
@@ -19,6 +22,8 @@ class DogsController < ApplicationController
     @dog = Dog.new(dog_params)
     @dog.save
     redirect_to dog_path(@dog)
+  end
+
   end
 
   def popular
