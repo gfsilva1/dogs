@@ -143,6 +143,8 @@ GEM
     nokogiri (1.13.4)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
+    nokogiri (1.13.4-x86_64-linux)
+      racc (~> 1.4)
     open-uri (0.2.0)
       stringio
       time
@@ -260,6 +262,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-linux
 
 DEPENDENCIES
   autoprefixer-rails (= 10.2.5)
