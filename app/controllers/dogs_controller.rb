@@ -4,7 +4,7 @@ class DogsController < ApplicationController
 
   def index
     if params[:query].present?
-      @dogs = Dog.batata(params[:query])
+      @dogs = Dog.busca(params[:query])
     else
       @dogs = Dog.all
     end
