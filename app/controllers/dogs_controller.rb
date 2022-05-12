@@ -24,8 +24,6 @@ class DogsController < ApplicationController
     redirect_to dog_path(@dog)
   end
 
-  end
-
   def popular
     @dogs = Dog.where(popularity: 5)
   end
