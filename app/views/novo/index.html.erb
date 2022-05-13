@@ -1,0 +1,21 @@
+<h1>Here are the breeds =) </h1>
+
+<table>
+  <thead>
+    <td>Raça</td>
+    <td>Expectativa de vida</td>
+    <td>Temperamento</td>
+    <td>Grupo</td>
+  </thead>
+
+  <tbody>
+    <%  @racas.each do |name| %>
+      <tr>
+        <td><%= name["name"] %></td>
+        <td><%= name["life_span"] %></td>
+        <td><%= name["temperament"] %></td>
+        <td><%= name["breed_group"] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
