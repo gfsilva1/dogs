@@ -11,10 +11,11 @@
   <tbody>
     <%  @racas.each do |name| %>
       <tr>
-        <td><%= name["name"] %></td>
+        <td><%= link_to name["name"], show_path(id: name["id"])%></td>
         <td><%= name["life_span"] %></td>
         <td><%= name["temperament"] %></td>
         <td><%= name["breed_group"] %></td>
+
       </tr>
     <% end %>
   </tbody>

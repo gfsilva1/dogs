@@ -5,6 +5,18 @@ class NovoController < ApplicationController
     @racas = @dados.captado
   end
 
+  def show
+    @raca = @dados.detalhado(params[:id])
+  end
+
+  def search
+    @app = @dados.captado
+    @results = @app.query(params[:q])
+    @raca = @results["response"]["filter"].map do |raca|
+      raca
+    end
+  end
+
   def set_dados_captados
     @dados = ApiController.new
   end
