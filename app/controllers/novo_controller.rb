@@ -6,6 +6,7 @@ class NovoController < ApplicationController
       @racas = @dados.captado.find { |x| x["name"] == params[:query] }
     else
       @racas = @dados.captado
+      @paginado = Kaminari.paginate_array(@racas).page(params[:page]).per(10)
     end
   end
 
