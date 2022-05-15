@@ -2,19 +2,15 @@ class NovoController < ApplicationController
   before_action :set_dados_captados
 
   def index
-    @racas = @dados.captado
+    if params[:query].present?
+      @racas = @dados.captado.find { |x| x["name"] == params[:query] }
+    else
+      @racas = @dados.captado
+    end
   end
 
   def show
     @raca = @dados.detalhado(params[:id])
-  end
-
-  def search
-    @app = @dados.captado
-    @results = @app.query(params[:q])
-    @raca = @results["response"]["filter"].map do |raca|
-      raca
-    end
   end
 
   def set_dados_captados

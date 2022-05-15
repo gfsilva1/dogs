@@ -14,7 +14,4 @@ class ApiController < ApplicationController
     self.class.get("/v1/breeds/#{id}", @dado_captado)
   end
 
-  def find(name)
-    @dado_captado = self.class.get("/v1/breeds", query: { q: name }).parsed_response
-  end
 end
