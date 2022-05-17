@@ -14,4 +14,7 @@ class ApiController < ApplicationController
     self.class.get("/v1/breeds/#{id}", @dado_captado)
   end
 
+  def foto
+    self.class.get("/v1/images/search", @dado_captado)
+  end
 end
