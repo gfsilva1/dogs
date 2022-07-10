@@ -1,7 +1,13 @@
+
 <div class="banner" style="background-image: url(<%=@foto%>);">
-  <div class="container">
-    <h1>Here are the breeds =) </h1>
+  <div class="disclaimer">
+
+  <%= link_to root_path do %>
+   <%= image_tag "dog.jpg", class: "img" %>
+  <% end %>
+
   </div>
+  <div class="container">
     <%= form_tag root_path, method: :get do %>
       <%= text_field_tag :query,
         params[:query],
@@ -10,34 +16,37 @@
       %>
     <%= submit_tag "Search", class: "btn btn-primary" %>
     <% end %>
+  </div>
 
-  <table>
-    <thead>
-      <td>Raça</td>
-      <td>Expectativa de vida</td>
-      <td>Temperamento</td>
-      <td>Grupo</td>
-    </thead>
+  <div class="card">
+    <table>
+      <thead class="title">
+        <td>Breed</td>
+        <td>Life Span</td>
+        <td>Temperament</td>
+        <td>Group</td>
+      </thead>
 
-    <tbody>
-        <%  if params[:query].present? %>
-          <tr>
-            <td><%= @racas["name"] %></td>
-            <td><%= @racas["life_span"] %></td>
-            <td><%= @racas["temperament"] %></td>
-            <td><%= @racas["breed_group"] %></td>
-          </tr>
-        <% else %>
-          <%= paginate @paginado %>
-          <%  @paginado.each do |name| %>
+      <tbody class="breed">
+          <%  if params[:query].present? %>
             <tr>
-              <td><%= link_to name["name"], show_path(id: name["id"])%></td>
-              <td><%= name["life_span"] %></td>
-              <td><%= name["temperament"] %></td>
-              <td><%= name["breed_group"] %></td>
+              <td><h1><%= @racas["name"] %></h1></td>
+              <td><%= @racas["life_span"] %></td>
+              <td><%= @racas["temperament"] %></td>
+              <td><%= @racas["breed_group"] %></td>
             </tr>
+          <% else %>
+            <%= paginate @paginado, left: 1, right: 3 %>
+            <%  @paginado.each do |name| %>
+              <tr>
+                <td><%= link_to name["name"], show_path(id: name["id"])%></td>
+                <td><%= name["life_span"] %></td>
+                <td><%= name["temperament"] %></td>
+                <td><%= name["breed_group"] %></td>
+              </tr>
+            <% end %>
           <% end %>
-        <% end %>
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </div>
 </div>

@@ -1,0 +1,16 @@
+current directory: /home/gfsilva/code/gfsilva1/dogs/dogs/vendor/bundle/ruby/2.7.0/gems/stringio-3.0.2/ext/stringio
+/home/gfsilva/.rvm/rubies/ruby-2.7.2/bin/ruby -I /home/gfsilva/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20220710-10070-5bboxo.rb extconf.rb
+checking for rb_io_extract_modeenc() in ruby/io.h... yes
+creating Makefile
+
+current directory: /home/gfsilva/code/gfsilva1/dogs/dogs/vendor/bundle/ruby/2.7.0/gems/stringio-3.0.2/ext/stringio
+make "DESTDIR=" clean
+
+current directory: /home/gfsilva/code/gfsilva1/dogs/dogs/vendor/bundle/ruby/2.7.0/gems/stringio-3.0.2/ext/stringio
+make "DESTDIR="
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/gfsilva/code/gfsilva1/dogs/dogs/vendor/bundle/ruby/2.7.0/gems/stringio-3.0.2/ext/stringio
+make "DESTDIR=" install
+/usr/bin/install -m 0755 stringio.so ./.gem.20220710-10070-ied7pk

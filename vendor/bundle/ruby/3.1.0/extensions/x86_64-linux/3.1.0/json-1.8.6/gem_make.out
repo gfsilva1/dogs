@@ -1,0 +1,13 @@
+current directory: /home/gfsilva/code/gfsilva1/dogs/dogs/vendor/bundle/ruby/3.1.0/gems/json-1.8.6/ext/json
+/home/gfsilva/.rvm/rubies/ruby-3.1.2/bin/ruby -I /home/gfsilva/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0 -r ./siteconf20220630-6402-wu0nzv.rb extconf.rb
+creating Makefile
+
+current directory: /home/gfsilva/code/gfsilva1/dogs/dogs/vendor/bundle/ruby/3.1.0/gems/json-1.8.6/ext/json
+make DESTDIR\= clean
+
+current directory: /home/gfsilva/code/gfsilva1/dogs/dogs/vendor/bundle/ruby/3.1.0/gems/json-1.8.6/ext/json
+make DESTDIR\=
+make: Nothing to be done for 'all'.
+
+current directory: /home/gfsilva/code/gfsilva1/dogs/dogs/vendor/bundle/ruby/3.1.0/gems/json-1.8.6/ext/json
+make DESTDIR\= install

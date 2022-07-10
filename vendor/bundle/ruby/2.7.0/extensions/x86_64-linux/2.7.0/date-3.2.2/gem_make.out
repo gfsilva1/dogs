@@ -1,0 +1,20 @@
+current directory: /home/gfsilva/code/gfsilva1/dogs/dogs/vendor/bundle/ruby/2.7.0/gems/date-3.2.2/ext/date
+/home/gfsilva/.rvm/rubies/ruby-2.7.2/bin/ruby -I /home/gfsilva/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20220710-10070-o3eljr.rb extconf.rb
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+
+current directory: /home/gfsilva/code/gfsilva1/dogs/dogs/vendor/bundle/ruby/2.7.0/gems/date-3.2.2/ext/date
+make "DESTDIR=" clean
+
+current directory: /home/gfsilva/code/gfsilva1/dogs/dogs/vendor/bundle/ruby/2.7.0/gems/date-3.2.2/ext/date
+make "DESTDIR="
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.so
+
+current directory: /home/gfsilva/code/gfsilva1/dogs/dogs/vendor/bundle/ruby/2.7.0/gems/date-3.2.2/ext/date
+make "DESTDIR=" install
+/usr/bin/install -m 0755 date_core.so ./.gem.20220710-10070-1dmctyh
